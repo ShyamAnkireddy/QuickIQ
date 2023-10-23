@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>QuickIQ</title>
+</head>
+
+<body>
+  <header>
+    <h1>QuickIQ</h1>
+  </header>
+
+  <div id="startSection" class="center">
+    <div id="description">
+      <p>Welcome to <span>QuickIQ</span>, your go-to platform for testing your knowledge in web development! Choose from our quiz streams in HTML, CSS, and JavaScript to challenge yourself and enhance your skills.</p>
+      <p>Prepare to embark on a journey of learning and discovery. Compete with others, track your progress on the leaderboard, and become a QuickIQ champion!</p>
+    </div>    
+    <button class="btn1" onclick="showForm()">Take Quiz</button>
+    <button class="btn1" onclick="showLeaderboard()">Leaderboard</button>
+  </div>
+
+  <form id="formSection" style="display: none;">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" spellcheck="false" autocomplete="off" required>
+    <label for="quizStream">Select Quiz Stream:</label>
+    <select id="quizStream" name="quizStream" required>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select>
+    <button type="button" onclick="startQuiz()">Start Quiz</button>
+  </form>
+
+  <div id="quizSection" class="center" style="display: none;">
+    <div class="QuestionBox Q1">
+      <h3 class="ques"></h3>
+      <div class="timer" id="timer"></div>
+      <div class="options">
+        <ul>
+          <li>
+            <input id="ans1" type="radio" name="radAnswer" class="option">
+            <label id="option1" for="ans1"></label>
+          </li>
+          <li>
+            <input id="ans2" type="radio" name="radAnswer" class="option">
+            <label id="option2" for="ans2"></label>
+          </li>
+          <li>
+            <input id="ans3" type="radio" name="radAnswer" class="option">
+            <label id="option3" for="ans3"></label>
+          </li>
+          <li>
+            <input id="ans4" type="radio" name="radAnswer" class="option">
+            <label id="option4" for="ans4"></label>
+          </li>
+        </ul>
+      </div>
+      <button class="btn" type="button" name="button">Submit</button>
+    </div>
+
+    <div class="scoreSection">
+      <div class="scoreArea">
+        <h1 class="scoreTxt">Hii</h1>
+        <p id="totalTime"></p>
+        <button class="btn2" type="button" name="button" onclick="refreshPage()">Home</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="leaderboardSection" class="center" style="display: none;">
+    <!-- Leaderboard content will be dynamically added using JavaScript -->
+  </div>
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
